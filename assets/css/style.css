@@ -1,0 +1,132 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+html{
+	scroll-behavior:smooth;
+}
+body{
+	background-color: #E6E6FA;
+	font-family: 'ZCOOL XiaoWei', serif;
+
+}
+#hw{
+	
+	background-color: black;
+}
+
+#hh{
+	
+	position: relative;
+}
+#hhh{
+	position: absolute;
+	top: 50px;
+	right: 40%;
+}
+#logo a{
+	
+	text-shadow: 2px 2px 2px #dfe6e9;
+}
+#m a{
+	position: relative;	
+}
+
+#m a:before{
+	content: "";
+	position: absolute;
+	left: 1px;
+	top: 80%;
+	width:0;
+	height: 3px;
+	background-color: black;
+	transition: all 0.5s linear;
+
+}
+#m a:after{
+	content: "";
+	position: absolute;
+	right: 1px;
+	top: 20%;
+	bottom: 80%;
+	width:0;
+	height: 3px;
+	background-color: black;
+	transition: all 0.5s linear;
+
+}
+
+#m a:hover::before{
+	width: 100%;
+	background-color: cornflowerblue;
+}
+#m a:hover::after{
+	width: 100%;
+	background-color: cornflowerblue;
+}
+
+ul{
+overflow: visible;
+font-weight: bold;
+}
+.navbar{
+	
+	height: 70px;
+}
+
+/*
+#bcimg{
+	background-image: url('../images/first.jpeg');
+	background-size: cover; 
+	background-position: center;
+	height: 100vh;
+	background-attachment: fixed;
+	position: relative;
+}*/
+
+
+.imgText{
+	color: #fff!important;
+	
+	font-weight: bold;
+	font-size: 30px;
+	text-transform: uppercase;
+}
+.booking1,.booking2{
+	opacity: 0;
+}
+.booking1.animated,.booking2.animated{
+	opacity: 1;
+}
+.gimg1,.gimg2,.gimg3,.gimg4,.gimg5,.gimg6{
+	opacity: 0;
+}
+.gimg1.animated,.gimg2.animated,.gimg3.animated,.gimg4.animated,.gimg5.animated,.gimg6.animated{
+	opacity: 1;
+}
+
+@media (max-width: 990px) {
+  .collapse.navbar-collapse {
+	background: lightgray;
+	
+    
+  }}
+  @media (max-width: 990px) {
+ .navbar ul.navbar-nav li.nav-item a.nav-link {
+  color: black;
+
+}}
+ @media (max-width: 768px) {
+ .navbar ul.navbar-nav li.nav-item  {
+  float: right;
+  
+}}
+ @media (min-width: 360px) {
+ .navbar.nav{
+ 	float: right;
+}   
+  }
+
+  
+
+
