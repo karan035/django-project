@@ -1,11 +1,24 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
-
+from .models import Enquery
 
 # Create your views here.
 def show(request):
     return render(request,"index.html")
+def enquery(request):
+    if request.method=="POST":
+        if request.POST.get('fname') and request.POST.get('email') and request.POST.get('contactNum') and request.POST.get('query'):
+            post=Enquery()
+            post.fname= request.POST.get('fname')
+            post.lname= request.POST.get('lname')
+            post.email= request.POST.get('email')
+            post.contactNum= request.POST.get('contactNum')
+            post.query= request.POST.get('query')
+            post.save()
+            return redirect('')
+        else:
+            return render(request,'index.html')
 def signup(request):
     if request.method=='POST':
         fname=request.POST['fname']
