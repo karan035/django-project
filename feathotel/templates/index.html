@@ -221,30 +221,32 @@
 			<div class="row ">
 				<div class="col-lg-6 col-md-6 col-sm-12" id="ff">
 					<h2 class="text-center">Write the problem you faced </h2>
-					<form class="mt-4" >
+					<form class="mt-4" action="enquery" method="Post"  >
+							{% csrf_token %}
 						<div class="form-row">
 							<div class="col">
-								<input type="text" class="form-control" placeholder="First name">
+								<input type="text" class="form-control" name="fname" placeholder="First name" required>
 							</div>
 							<div class="col">
-								<input type="text" class="form-control" placeholder="Last name">
+								<input type="text" class="form-control"name="lname" placeholder="Last name" required>
 							</div>
 						</div>
+						
 						<div class="form-row mt-3">
 							<div class="col">
-								<input type="number" class="form-control" placeholder="contact number">
+								<input type="email" class="form-control" name="email" placeholder="email" required>
 							</div>
 							
 						</div>
 						<div class="form-row mt-3">
 							<div class="col">
-								<input type="email" class="form-control" placeholder="email">
+								<input type="number" class="form-control" name="contactNum" placeholder="contact number" required>
 							</div>
 							
 						</div>
 						<div class="form-row mt-3">
 							<div class="col">
-								<textarea class="form-control"  rows="3" placeholder="write the query here"></textarea>
+								<textarea class="form-control"  rows="3" name="query" placeholder="write the query here" required></textarea>
 							</div>
 							
 						</div>

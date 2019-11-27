@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from feathotel import views
+from feathotel.models import Enquery
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.show,name=''),
+    path('enquery',views.enquery,name='enquery'),
     path('signup',views.signup,name='signup'),
     path('login',views.login,name='login'),
     path('logout',views.logout,name='logout'),
